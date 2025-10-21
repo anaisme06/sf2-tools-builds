@@ -15,9 +15,9 @@ jobs:
         repository: git-moss/ConvertWithMoss
     - uses: actions/setup-java@v5
       with:
-        distribution: 'temurin'
+        distribution: 'zulu'
         java-version: '25'
-    - run: make
+    - run: mvn -B package jpackage::jpackage@linux --file pom.xml
     - name: Print Folder Tree
       uses: jaywcjlove/github-action-folder-tree@main
       with:
