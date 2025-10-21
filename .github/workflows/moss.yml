@@ -25,4 +25,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: cwithmarm
-        path: ./target/releases/convertwithmoss_14.2.0_arm64.deb
+        path: ./target/release/convertwithmoss_14.2.0_arm64.deb
