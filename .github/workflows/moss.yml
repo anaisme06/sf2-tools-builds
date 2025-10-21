@@ -22,7 +22,7 @@ jobs:
       uses: jaywcjlove/github-action-folder-tree@main
       with:
         path: ./
-    - uses: actions/upload-artifact@v5
+    - uses: actions/upload-artifact@v4
       with:
         name: cwithmarm
         path: ./releases/convertwithmoss_14.2.0_arm64.deb
