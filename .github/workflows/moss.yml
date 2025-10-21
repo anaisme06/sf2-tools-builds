@@ -1,0 +1,22 @@
+name: Makefile CI
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v4
+      with: 
+        repository: DaforLynx/juicysfplugin-no-interp 
+    - name: Build Project
+      uses: threeal/cmake-action@v2.1.0
+    - name: Print Folder Tree
+      uses: jaywcjlove/github-action-folder-tree@main
+      with:
+        path: ./
+        depth: 2
