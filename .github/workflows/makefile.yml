@@ -27,5 +27,6 @@ jobs:
         path: |
          ./sf2-split
          ./sf2-test
+         ./sf2-keyrange
          ./sf2-split-json.py
          ./sf2-split.sh
