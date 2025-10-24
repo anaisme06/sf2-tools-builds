@@ -12,11 +12,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with: 
-        repository: MarcSabatella/soundfont-cmdline-tools
-    - run: make
+        repository: enikey87/sf2-utils
+    - uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'
+    - run: make all
     - uses: actions/upload-artifact@v4
       with:
         name: sf2-tools
         path: |
          ./sf2-split
          ./sf2-test
+         ./sf2-split-json.py
+         ./sf2-split.sh
