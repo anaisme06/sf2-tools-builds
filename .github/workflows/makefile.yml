@@ -17,10 +17,10 @@ jobs:
       with:
         python-version: '3.13'
     - run: make all
-     - name: Print Folder Tree
-       uses: jaywcjlove/github-action-folder-tree@main
-       with:
-         path: ./
+    - name: Print Folder Tree
+      uses: jaywcjlove/github-action-folder-tree@main
+      with:
+        path: ./
     - uses: actions/upload-artifact@v4
       with:
         name: sf2-tools
